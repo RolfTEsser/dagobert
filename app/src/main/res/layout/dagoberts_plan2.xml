@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Grid2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline_h1"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1.0E-4"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline_h2"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.06"
+        tools:layout_editor_absoluteY="31dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline_h3"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.12"
+        tools:layout_editor_absoluteY="63dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline_h4"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.18"
+        tools:layout_editor_absoluteY="94dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline_h5"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.24"
+        tools:layout_editor_absoluteY="125dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline_h6"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3"
+        tools:layout_editor_absoluteY="156dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline_h7"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.36"
+        tools:layout_editor_absoluteY="187dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline_h8"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.42"
+        tools:layout_editor_absoluteY="218dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline_h9"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.48"
+        tools:layout_editor_absoluteY="249dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline_h10"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.54"
+        tools:layout_editor_absoluteY="281dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline_h11"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6"
+        tools:layout_editor_absoluteY="312dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline_h12"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.66"
+        tools:layout_editor_absoluteY="343dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline_h13"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.72"
+        tools:layout_editor_absoluteY="374dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline_h14"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.78"
+        tools:layout_editor_absoluteY="405dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline_h15"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.84"
+        tools:layout_editor_absoluteY="436dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline_v1"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="1.0E-4"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline_v1a"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.125" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline_v2"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="96dp"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline_v3"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4609375"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="177dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline_v4"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6510417"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="250dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline_v5"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7994792"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="307dp" />
+
+    <TextView
+        android:id="@+id/Header2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/Header2"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v5"
+        app:layout_constraintTop_toTopOf="@+id/guideline_h1"
+        />
+
+    <TextView
+        android:id="@+id/KontostandNeu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="@string/KontostandNeu"
+        android:ems="8"
+        android:textSize="14sp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v1"
+        app:layout_constraintTop_toTopOf="@+id/guideline_h2"
+        android:layout_marginTop="8dp" />
+
+    <EditText
+        android:id="@+id/contKontostandNeu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:ems="6"
+        android:gravity="left"
+        android:inputType="numberDecimal"
+        android:maxLength="7"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v3"
+        app:layout_constraintBaseline_toBaselineOf="@+id/KontostandNeu" />
+
+    <TextView
+        android:id="@+id/Einnahmen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/Einnahmen"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v1"
+        app:layout_constraintTop_toTopOf="@+id/guideline_h3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:gravity="center_horizontal"
+        android:text="@string/gebucht"
+        android:ems="3"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Einnahmen"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_v4"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="@string/Bemerkung"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Einnahmen"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v4" />
+
+    <!-- Gehalt -->
+    <TextView
+        android:id="@+id/Gehalt"
+        android:text="@string/Gehalt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="right"
+        android:ems="5"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v1"
+        app:layout_constraintTop_toTopOf="@+id/guideline_h4"
+        />
+
+    <EditText
+        android:id="@+id/contGehalt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:ems="5"
+        android:inputType="number"
+        android:maxLength="6"
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Gehalt"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v2" />
+
+    <CheckBox
+        android:id="@+id/CBGehalt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="onClickCBGehalt"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v3"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_v4"
+        app:layout_constraintBaseline_toBaselineOf="@+id/contGehalt"
+        app:layout_constraintHorizontal_bias="0.48" />
+
+    <EditText
+        android:id="@+id/erlGehalt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="7"
+        android:inputType="textPersonName"
+        android:maxLength="25"
+        android:textSize="12sp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v4"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Gehalt" />
+
+    <!-- Gutschriften -->
+    <TextView
+        android:id="@+id/Gutschriften"
+        android:text="@string/Gutschriften"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="5"
+        android:gravity="right"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v1"
+        app:layout_constraintTop_toTopOf="@+id/guideline_h5" />
+
+    <EditText
+        android:id="@+id/contGutschriften"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:ems="5"
+        android:inputType="number"
+        android:maxLength="6"
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Gutschriften"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v2" />
+
+    <CheckBox
+        android:id="@+id/CBGutschriften"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="onClickCBGutschriften"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v3"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_v4"
+        app:layout_constraintBaseline_toBaselineOf="@+id/contGutschriften"
+        app:layout_constraintHorizontal_bias="0.48" />
+
+    <EditText
+        android:id="@+id/erlGutschriften"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="7"
+        android:inputType="textPersonName"
+        android:maxLength="25"
+        android:textSize="12sp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v4"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Gutschriften" />
+
+    <!-- SonstEin1 -->
+    <TextView
+        android:id="@+id/SonstEin1"
+        android:text="@string/SonstEin1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="5"
+        android:gravity="right"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v1"
+        app:layout_constraintTop_toTopOf="@+id/guideline_h6" />
+
+    <EditText
+        android:id="@+id/contSonstEin1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:ems="5"
+        android:inputType="number"
+        android:maxLength="6"
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/SonstEin1"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v2" />
+
+    <CheckBox
+        android:id="@+id/CBSonstEin1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:visibility="invisible"
+        android:onClick="onClickCBSonstEin1"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v3"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_v4"
+        app:layout_constraintBaseline_toBaselineOf="@+id/contSonstEin1"
+        app:layout_constraintHorizontal_bias="0.48" />
+
+    <EditText
+        android:id="@+id/erlSonstEin1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="7"
+        android:inputType="textPersonName"
+        android:maxLength="25"
+        android:textSize="12sp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v4"
+        app:layout_constraintBaseline_toBaselineOf="@+id/SonstEin1" />
+
+    <!-- SonstEin2 -->
+    <TextView
+        android:id="@+id/SonstEin2"
+        android:text="@string/SonstEin2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="5"
+        android:gravity="right"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v1"
+        app:layout_constraintTop_toTopOf="@+id/guideline_h7" />
+
+    <EditText
+        android:id="@+id/contSonstEin2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:ems="5"
+        android:inputType="number"
+        android:maxLength="6"
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/SonstEin2"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v2" />
+
+    <CheckBox
+        android:id="@+id/CBSonstEin2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:visibility="invisible"
+        android:onClick="onClickCBSonstEin2"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v3"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_v4"
+        app:layout_constraintBaseline_toBaselineOf="@+id/contSonstEin2"
+        app:layout_constraintHorizontal_bias="0.48" />
+
+    <EditText
+        android:id="@+id/erlSonstEin2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="7"
+        android:inputType="textPersonName"
+        android:maxLength="25"
+        android:textSize="12sp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v4"
+        app:layout_constraintBaseline_toBaselineOf="@+id/SonstEin2" />
+
+    <!-- delimiter -->
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/delimiter"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v1"
+        app:layout_constraintTop_toTopOf="@+id/guideline_h8"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="40dp" />
+
+    <!-- SummeEin -->
+    <TextView
+        android:id="@+id/SummeEin"
+        android:text="@string/SummeEin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="5"
+        android:gravity="right"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v1"
+        app:layout_constraintTop_toTopOf="@+id/guideline_h9" />
+
+    <TextView
+        android:id="@+id/contSummeEin"
+        style="@android:style/Widget.EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:ems="5"
+        android:inputType="number"
+        android:maxLength="6"
+        android:textSize="12sp"
+        android:focusable="false"
+        app:layout_constraintBaseline_toBaselineOf="@+id/SummeEin"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v2" />
+
+    <CheckBox
+        android:id="@+id/CBSummeEin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="onClickCBSummeEin"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v3"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_v4"
+        app:layout_constraintBaseline_toBaselineOf="@+id/contSummeEin"
+        app:layout_constraintHorizontal_bias="0.48" />
+
+    <EditText
+        android:id="@+id/erlSummeEin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="7"
+        android:inputType="textPersonName"
+        android:maxLength="25"
+        android:textSize="12sp"
+        android:layout_marginLeft="8dp"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v4"
+        app:layout_constraintBaseline_toBaselineOf="@+id/SummeEin" />
+
+    <!-- Bares -->
+    <TextView
+        android:id="@+id/Bares"
+        android:text="@string/Bares"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="5"
+        android:gravity="right"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v1"
+        app:layout_constraintTop_toTopOf="@+id/guideline_h10" />
+
+    <EditText
+        android:id="@+id/contBares"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:ems="5"
+        android:inputType="number"
+        android:maxLength="6"
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Bares"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v2" />
+
+    <ImageView
+        android:id="@+id/button_red"
+        android:src="@drawable/button_red"
+        android:contentDescription="Knopf (rot)"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:onClick="onDollarsClicked"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_v4"
+        app:layout_constraintTop_toBottomOf="@+id/SummeEin"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"/>
+
+    <CheckBox
+        android:id="@+id/CBBares"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="onClickCBBares"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v3"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_v4"
+        app:layout_constraintBaseline_toBaselineOf="@+id/contBares"
+        app:layout_constraintHorizontal_bias="0.48" />
+
+    <EditText
+        android:id="@+id/erlBares"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="7"
+        android:inputType="textPersonName"
+        android:maxLength="25"
+        android:textSize="12sp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v4"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Bares" />
+
+    <!-- Tage -->
+    <TextView
+        android:id="@+id/Tage"
+        android:text="@string/Tage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="2"
+        android:gravity="center_horizontal"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v1"
+        app:layout_constraintTop_toTopOf="@+id/guideline_h11" />
+
+    <EditText
+        android:id="@+id/contTage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:ems="3"
+        android:inputType="number"
+        android:maxLength="3"
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Tage"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v1a" />
+
+    <!-- Satz -->
+    <TextView
+        android:id="@+id/Satz"
+        android:text="@string/Satz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="5"
+        android:gravity="center_horizontal"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Tage" />
+
+    <EditText
+        android:id="@+id/contSatz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:ems="3"
+        android:inputType="number"
+        android:maxLength="3"
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Tage"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v3" />
+
+    <!-- Bedarf -->
+    <TextView
+        android:id="@+id/Bedarf"
+        android:text="@string/Bedarf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="3"
+        android:gravity="left"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v4"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Tage" />
+
+    <TextView
+        android:id="@+id/contBedarf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:ems="4"
+        style="@android:style/Widget.EditText"
+        android:inputType="number"
+        android:maxLength="4"
+        android:textSize="12sp"
+        android:focusable="false"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Tage"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v5" />
+
+    <!-- delimiter -->
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/delimiter"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v1"
+        app:layout_constraintTop_toTopOf="@+id/guideline_h12"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="40dp" />
+
+    <!-- Kopfhau -->
+    <TextView
+        android:id="@+id/Kopfhau"
+        android:text="@string/Kopfhau"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="right"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v1"
+        app:layout_constraintTop_toTopOf="@+id/guideline_h13" />
+
+    <TextView
+        android:id="@+id/contKopfhau"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:ems="4"
+        style="@android:style/Widget.EditText"
+        android:inputType="number"
+        android:maxLength="3"
+        android:textSize="12sp"
+        android:focusable="false"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Kopfhau"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v3" />
+
+    <ImageButton
+        android:src="@drawable/kopfhauen1"
+        android:contentDescription="@string/Kopfhau"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_trans"
+        android:onClick="onKopfHauClicked"
+        android:layout_columnSpan="3"
+        android:layout_rowSpan="4"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toTopOf="@+id/guideline_h12"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v4" />
+
+    <ImageView
+        android:id="@+id/dollars"
+        android:src="@drawable/dollar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/Kopfhau"
+        android:layout_columnSpan="5"
+        android:layout_rowSpan="2"
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        android:layout_gravity="center_horizontal|right"
+        app:layout_constraintTop_toTopOf="@+id/guideline_h15"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_v1a" />
+
+</android.support.constraint.ConstraintLayout>

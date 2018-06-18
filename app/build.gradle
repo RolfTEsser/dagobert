@@ -1,0 +1,29 @@
+apply plugin: 'com.android.application'
+
+repositories {
+    maven {
+        url 'https://maven.google.com'
+    }
+}
+
+dependencies {
+    implementation 'com.google.android.gms:play-services-drive:15.0.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+}
+android {
+    compileSdkVersion 26
+
+    defaultConfig {
+        applicationId "de.floresse.dagobert"
+        minSdkVersion 14
+        targetSdkVersion 14
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}

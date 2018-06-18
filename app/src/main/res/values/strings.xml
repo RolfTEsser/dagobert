@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Dagobert</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_save">Save</string>
+    <string name="menu_discard">Discard</string>
+    <string name="menu_forward">next</string>
+    <string name="menu_backward">previous</string>
+    <string name="menu_zoom_in">Zoom in</string>
+    <string name="menu_zoom_out">Zoom out</string>
+    <string name="menu_minus1">Minus 1 Tag / 1 Satz</string>
+    <string name="t1">0123456789</string>
+    <string name="t2">8--------8</string>
+    <string name="t3">8--------8</string>
+    <string name="t4">8--------8</string>
+    <string name="t5">8--------8</string>
+    <string name="t6">8--------8</string>
+    <string name="t7">8--------8</string>
+    <string name="t8">8---8</string>
+    <string name="Header1">Seite 1</string>
+    <string name="Header2">Seite 2</string>
+    <string name="Kontostand">"Kontostand:"</string>
+    <string name="Ausgaben">"Ausgaben:"</string>
+    <string name="Strom">"Strom:"</string>
+    <string name="Telefon">1und1:</string>
+    <string name="Miete">Miete:</string>
+    <string name="Konto">Kontogeb.:</string>
+    <string name="Zeitung">Zeitung:</string>
+    <string name="Versicherung">Versicher.:</string>
+    <string name="Rechnungen">Rechnung:</string>
+    <string name="TVGeb">TV-Geb.:</string>
+    <string name="SonstAus1">Sonstiges:</string>
+    <string name="SonstAus2">mehr…  :</string>
+    <string name="SummeAus">Summe Aus:</string>
+    <string name="KontostandNeu">Kontostand Neu:</string>
+    <string name="Einnahmen">"Einnahmen:"</string>
+    <string name="Gehalt">Gehalt:</string>
+    <string name="Gutschriften">Gutschriften:</string>
+    <string name="SonstEin1">Sonstiges:</string>
+    <string name="SonstEin2">mehr…  :</string>
+    <string name="SummeEin">Summe Ein:</string>
+    <string name="Bares">Portefeuille:</string>
+    <string name="Tage">Tage</string>
+    <string name="Satz">x Satz:</string>
+    <string name="Bedarf">Bedarf</string>
+    <string name="Kopfhau">"auf'n Kopf hauen:"</string>
+    <string name="Bemerkung">Bemerkung</string>
+    <string name="bezahlt">bezahlt</string>
+    <string name="gebucht">geb.</string>
+    <string name="forward">forward</string>
+    <string name="backward">backward</string>
+
+    <color name="mygrey">#888888</color>
+    <color name="delimiter">#cccccccc</color>
+
+    <!-- Preferences -->
+    <string name="pref_satz_title">Tagessatz</string>
+    <string name="pref_title_isFixSatz">Fester Satz</string>
+    <string name="pref_summary_isFixSatz">Restbedarf wird mit variablem Satz berechnet</string>
+    <string name="pref_title_FixSatz">Betrag festlegen</string>
+    <string name="pref_summary_FixSatz"/>
+    <string name="pref_default_FixSatz">5</string>
+    <string name="pref_sound_title">Sound</string>
+    <string name="pref_title_isSoundOn">Sound für Kopfhauen</string>
+    <string name="pref_summary_isSoundOn">Sounds für KopfHauen wählen</string>
+    <string name="pref_title_Sound_Aua">Aua</string>
+    <string name="pref_title_Sound_haha">Haha</string>
+    <string name="pref_title_Sound_moepse">Möpse</string>
+    <string name="pref_title_Sound_werner">Hau wääch</string>
+    <string name="pref_filename_title">FileName</string>
+    <string name="pref_title_filename">für Google Drive</string>
+</resources>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+  
+    <PreferenceCategory 
+        android:title="@string/pref_satz_title"
+        android:key="pref_key_satz_title">
+        <CheckBoxPreference
+            android:key="pref_isFixSatz"
+            android:title="@string/pref_title_isFixSatz"
+            android:summary="@string/pref_summary_isFixSatz"
+            android:defaultValue="false" 
+            />
+        <EditTextPreference 
+            android:key="pref_key_FixSatz"
+            android:dependency="pref_isFixSatz"
+            android:title="@string/pref_title_FixSatz"
+            android:defaultValue="@string/pref_default_FixSatz" 
+			android:inputType="numberDecimal"
+			android:ems="4"
+		    android:maxLength="5"
+		    android:selectAllOnFocus="true"
+            />
+<!-- 
+		    
+            android:summary="@string/pref_summary_FixSatz"
+			android:widgetLayout="@xml/prefeditsatz" sieht besser aus, funzt aber ohne wert, wie kommt man an die Werte dieses Eingabefelds ????
+ -->        
+    </PreferenceCategory>
+  
+    <PreferenceCategory 
+        android:title="@string/pref_sound_title"
+        android:key="pref_key_sound_title">
+        <SwitchPreference
+            android:key="pref_isSoundOn"
+            android:title="@string/pref_title_isSoundOn"
+            android:defaultValue="false" 
+            />
+        <CheckBoxPreference
+            android:key="pref_isSound_Aua"
+            android:dependency="pref_isSoundOn"
+            android:title="@string/pref_title_Sound_Aua"
+            android:defaultValue="false" 
+            />
+        <CheckBoxPreference
+            android:key="pref_isSound_haha"
+            android:dependency="pref_isSoundOn"
+            android:title="@string/pref_title_Sound_haha"
+            android:defaultValue="false" 
+            />
+        <CheckBoxPreference
+            android:key="pref_isSound_moepse"
+            android:dependency="pref_isSoundOn"
+            android:title="@string/pref_title_Sound_moepse"
+            android:defaultValue="false" 
+            />
+        <CheckBoxPreference
+            android:key="pref_isSound_werner"
+            android:dependency="pref_isSoundOn"
+            android:title="@string/pref_title_Sound_werner"
+            android:defaultValue="false" 
+            />
+<!-- 
+			android:widgetLayout="@xml/prefeditsatz" sieht besser aus, funzt aber ohne wert, wie kommt man an die Werte dieses Eingabefelds ????
+ -->        
+    </PreferenceCategory>
+  
+    <PreferenceCategory 
+        android:title="@string/pref_filename_title"
+        android:key="pref_key_filename_title">
+        <EditTextPreference
+            android:key="pref_filename"
+            android:title="@string/pref_title_filename"
+            android:defaultValue="dagoprefs.txt"
+            />
+    </PreferenceCategory>
+    
+    
+</PreferenceScreen>
