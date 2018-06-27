@@ -697,7 +697,7 @@
         android:ems="4"
         style="@android:style/Widget.EditText"
         android:inputType="number"
-        android:maxLength="3"
+        android:maxLength="4"
         android:textSize="12sp"
         android:focusable="false"
         app:layout_constraintBaseline_toBaselineOf="@+id/Kopfhau"
