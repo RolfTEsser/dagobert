@@ -8,6 +8,7 @@ import de.floresse.util.ScaledFrameLayout;
 import android.app.Activity;
 import android.content.Context;
 import android.content.IntentSender;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.media.MediaPlayer;
 import android.media.Ringtone;
@@ -1378,8 +1379,15 @@ public class MainActivity extends Activity
 	}
 
 	// im Layout aktiviert:
-	public void onDollarsClicked(View v) {
+	public void onMinus1Clicked(View v) {
 		onMinus1(null);
+	}
+
+	// im Layout aktiviert:
+	public void onDollarsClicked(View v) {
+		PackageManager pm = getPackageManager();
+		Intent intent = pm.getLaunchIntentForPackage("de.floresse.pluto");
+		startActivity(intent);
 	}
 
 	public void onKopfHauClicked(View v) {
