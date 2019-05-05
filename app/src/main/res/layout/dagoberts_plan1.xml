@@ -745,7 +745,7 @@
         app:layout_constraintLeft_toLeftOf="@+id/guideline_v4"
         app:layout_constraintBaseline_toBaselineOf="@+id/SonstAus2" />
 
-    <TextView
+    <View
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:background="@color/delimiter"
