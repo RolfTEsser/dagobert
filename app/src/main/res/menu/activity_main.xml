@@ -1,34 +1,40 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android"> 
-
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/menu_minus1"
+        android:title="@string/menu_minus1"
+        android:showAsAction="never"
+        android:onClick="onMinus1"/>
+    <item
+        android:id="@+id/menu_save"
+        android:title="@string/menu_save"
+        android:showAsAction="never"
+        android:icon="@drawable/content_save_s"
+        android:onClick="onSaveClicked"/>
+    <item
+        android:id="@+id/menu_discard"
+        android:title="@string/menu_discard"
+        android:showAsAction="never"
+        android:icon="@drawable/content_discard_s"
+        android:onClick="onDiscardClicked"/>
     <item 
         android:id="@+id/menu_forward"
         android:title="@string/menu_forward"
         android:showAsAction="always"
-        android:icon="@drawable/navigation_forward"
+        android:actionViewClass="android.widget.ImageView"
+        android:icon="@drawable/arrow_forward_black"
         android:onClick="onForwardMenu"/>
     <item 
         android:id="@+id/menu_backward"
         android:title="@string/menu_backward"
         android:showAsAction="always"
-        android:icon="@drawable/navigation_back"
+        android:actionViewClass="android.widget.ImageView"
+        android:icon="@drawable/arrow_back_black"
         android:onClick="onBackwardMenu"/>
-    <item 
-        android:id="@+id/menu_save"
-        android:title="@string/menu_save"
-        android:showAsAction="always"
-        android:icon="@drawable/content_save"
-        android:onClick="onSaveClicked"/>
-    <item 
-        android:id="@+id/menu_discard"
-        android:title="@string/menu_discard"
-        android:showAsAction="always"
-        android:icon="@drawable/content_discard"
-        android:onClick="onDiscardClicked"/>
     <item
         android:id="@+id/menu_settings"
-        android:showAsAction="always"
+        android:showAsAction="ifRoom"
         android:title="@string/menu_settings"
-        android:icon="@drawable/action_settings"
+        android:icon="@drawable/action_settings_s"
         android:onClick="onSettingsClicked"/>
     
 </menu>

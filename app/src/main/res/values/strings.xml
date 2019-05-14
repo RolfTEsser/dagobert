@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string-array name="themes">
+        <item>AppTheme</item>
+        <item>AppTheme1</item>
+        <item>AppTheme2</item>
+    </string-array>
+
+    <string name="def_theme">AppTheme</string>
+    <string name="settings">Settings</string>
+    <string name="theme_summary">Appearance</string>
+    <string name="theme_dialog_title">Theme</string>
+
     <string name="app_name">Dagobert</string>
     <string name="menu_settings">Settings</string>
     <string name="menu_save">Save</string>
@@ -49,9 +61,6 @@
     <string name="gebucht">geb.</string>
     <string name="forward">forward</string>
     <string name="backward">backward</string>
-
-    <color name="mygrey">#888888</color>
-    <color name="delimiter">#cccccccc</color>
 
     <!-- Preferences -->
     <string name="pref_satz_title">Tagessatz</string>

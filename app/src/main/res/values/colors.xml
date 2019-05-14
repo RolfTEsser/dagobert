@@ -17,6 +17,11 @@
 <resources>
 
     <color name="mystatusbar">#00cc0000</color>
+    <color name="mystatusbar_light">#EF5350</color>
     <color name="mytoolbar">#00880000</color>
+    <color name="mytoolbar_light">#E57373</color>
+    <color name="mydialog">#ff000000</color>
+
+    <color name="delimiter">#cccccccc</color>
 
 </resources>

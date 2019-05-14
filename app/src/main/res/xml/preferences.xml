@@ -73,6 +73,15 @@
             android:defaultValue="dagoprefs.txt"
             />
     </PreferenceCategory>
-    
-    
+    <PreferenceCategory>
+    <ListPreference
+        android:defaultValue="@string/def_theme"
+        android:entries="@array/themes"
+        android:entryValues="@array/themes"
+        android:key="pref_theme"
+        android:title="@string/theme_dialog_title"
+        android:summary="@string/theme_summary"
+        android:dialogTitle="@string/theme_dialog_title"/>
+    </PreferenceCategory>
+
 </PreferenceScreen>

@@ -1,15 +1,23 @@
 <resources>
 
-    <style name="AppTheme" parent="android:Theme.Material.NoActionBar">
+    <style name="AppTheme" parent="android:Theme.DeviceDefault.NoActionBar">
         <item name="android:statusBarColor">@color/mystatusbar</item>
         <item name="android:windowBackground">@drawable/background_holo_dark</item>
+        <item name="android:colorBackgroundFloating">@color/dialog_background</item>
+        <item name="android:toolbarStyle">@color/mytoolbar</item>
+        <item name="android:colorAccent">#bbbbbb</item>
     </style>
 
-    <style name="ToolBarTheme" parent="android:ThemeOverlay.Material.ActionBar">
+    <style name="AppTheme1" parent="android:Theme.DeviceDefault.NoActionBar">
+        <item name="android:statusBarColor">@color/mystatusbar</item>
+        <item name="android:toolbarStyle">@color/mytoolbar</item>
+        <item name="android:colorAccent">#bbbbbb</item>
     </style>
 
-    <style name="ToolBarThemePopUp" parent="android:ThemeOverlay.Material.ActionBar">
-        <item name="android:colorBackground">#ff000000</item>
+    <style name="AppTheme2" parent="android:Theme.DeviceDefault.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/mystatusbar_light</item>
+        <item name="android:toolbarStyle">@color/mytoolbar_light</item>
+        <item name="android:colorAccent">@color/mytoolbar_light</item>
     </style>
 
 </resources>
