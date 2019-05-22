@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/guideline_h1"
@@ -16,7 +16,7 @@
         tools:layout_editor_absoluteY="0dp"
         tools:layout_editor_absoluteX="0dp" />
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/guideline_h2"
@@ -25,7 +25,7 @@
         tools:layout_editor_absoluteY="31dp"
         tools:layout_editor_absoluteX="0dp" />
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/guideline_h3"
@@ -34,7 +34,7 @@
         tools:layout_editor_absoluteY="63dp"
         tools:layout_editor_absoluteX="0dp" />
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/guideline_h4"
@@ -43,7 +43,7 @@
         tools:layout_editor_absoluteY="94dp"
         tools:layout_editor_absoluteX="0dp" />
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/guideline_h5"
@@ -52,7 +52,7 @@
         tools:layout_editor_absoluteY="125dp"
         tools:layout_editor_absoluteX="0dp" />
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/guideline_h6"
@@ -61,7 +61,7 @@
         tools:layout_editor_absoluteY="156dp"
         tools:layout_editor_absoluteX="0dp" />
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/guideline_h7"
@@ -70,7 +70,7 @@
         tools:layout_editor_absoluteY="187dp"
         tools:layout_editor_absoluteX="0dp" />
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/guideline_h8"
@@ -79,7 +79,7 @@
         tools:layout_editor_absoluteY="218dp"
         tools:layout_editor_absoluteX="0dp" />
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/guideline_h9"
@@ -88,7 +88,7 @@
         tools:layout_editor_absoluteY="249dp"
         tools:layout_editor_absoluteX="0dp" />
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/guideline_h10"
@@ -97,7 +97,7 @@
         tools:layout_editor_absoluteY="281dp"
         tools:layout_editor_absoluteX="0dp" />
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/guideline_h11"
@@ -106,7 +106,7 @@
         tools:layout_editor_absoluteY="312dp"
         tools:layout_editor_absoluteX="0dp" />
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/guideline_h12"
@@ -115,7 +115,7 @@
         tools:layout_editor_absoluteY="343dp"
         tools:layout_editor_absoluteX="0dp" />
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/guideline_h13"
@@ -124,7 +124,7 @@
         tools:layout_editor_absoluteY="374dp"
         tools:layout_editor_absoluteX="0dp" />
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/guideline_h14"
@@ -133,7 +133,7 @@
         tools:layout_editor_absoluteY="405dp"
         tools:layout_editor_absoluteX="0dp" />
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/guideline_h15"
@@ -142,7 +142,7 @@
         tools:layout_editor_absoluteY="436dp"
         tools:layout_editor_absoluteX="0dp" />
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/guideline_v1"
@@ -151,14 +151,14 @@
         tools:layout_editor_absoluteY="0dp"
         tools:layout_editor_absoluteX="0dp" />
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/guideline_v1a"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.125" />
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/guideline_v2"
@@ -167,7 +167,7 @@
         tools:layout_editor_absoluteX="96dp"
         app:layout_constraintGuide_percent="0.25" />
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/guideline_v3"
@@ -176,7 +176,7 @@
         tools:layout_editor_absoluteY="0dp"
         tools:layout_editor_absoluteX="177dp" />
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/guideline_v4"
@@ -185,7 +185,7 @@
         tools:layout_editor_absoluteY="0dp"
         tools:layout_editor_absoluteX="250dp" />
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/guideline_v5"
@@ -550,6 +550,24 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/Bares"
         app:layout_constraintLeft_toLeftOf="@+id/guideline_v2" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_v4"
+        app:layout_constraintTop_toBottomOf="@+id/SummeEin"
+        app:fabSize="mini"
+        app:backgroundTint="@color/mystatusbar_light"
+        app:rippleColor="#880000"
+        app:elevation="4dp"
+        app:borderWidth="0dp"
+        android:src="@drawable/ic_minuseins"
+        android:onClick="onMinus1Clicked"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"/>
+
+<!--
     <ImageView
         android:id="@+id/button_red"
         android:src="@drawable/button_red"
@@ -561,6 +579,7 @@
         app:layout_constraintTop_toBottomOf="@+id/SummeEin"
         android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"/>
+-->
 
     <CheckBox
         android:id="@+id/CBBares"
@@ -704,6 +723,7 @@
         app:layout_constraintLeft_toLeftOf="@+id/guideline_v3" />
 
     <ImageButton
+        android:id="@+id/kopfhauen"
         android:src="@drawable/kopfhauen1"
         android:contentDescription="@string/Kopfhau"
         android:layout_width="wrap_content"
@@ -731,4 +751,4 @@
         app:layout_constraintTop_toTopOf="@+id/guideline_h15"
         app:layout_constraintLeft_toLeftOf="@+id/guideline_v1a" />
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

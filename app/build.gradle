@@ -1,11 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 28
 
     defaultConfig {
         applicationId "de.floresse.dagobert"
-        minSdkVersion 23
+        minSdkVersion 26
         targetSdkVersion 26
         multiDexEnabled true
     }
@@ -40,6 +40,9 @@ android {
 }
 
 dependencies {
+    implementation fileTree(dir: '../../drivefile/drivefile/build/outputs/aar', include: ['*.aar','*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
     implementation 'com.google.apis:google-api-services-drive:v3-rev110-1.23.0'
     implementation 'com.google.android.gms:play-services-drive:15.0.1'
     implementation 'com.google.android.gms:play-services-auth:16.0.1'
@@ -50,5 +53,5 @@ dependencies {
     implementation('com.google.apis:google-api-services-drive:v3-rev136-1.25.0') {
         exclude group: 'org.apache.httpcomponents'
     }
-    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 }

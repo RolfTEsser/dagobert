@@ -7,19 +7,25 @@ import android.content.res.Configuration;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.graphics.Point;
-import android.support.constraint.ConstraintLayout;
+import androidx.constraintlayout.widget.ConstraintLayout;
+
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.transition.Scene;
+import android.transition.Transition;
+import android.transition.TransitionInflater;
+import android.transition.TransitionManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
@@ -32,6 +38,7 @@ import android.widget.ViewFlipper;
 import android.widget.ImageView;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.Scope;
@@ -45,6 +52,7 @@ import com.google.api.services.drive.model.File;
 import java.sql.Timestamp;
 import java.util.Collections;
 import java.util.Date;
+import java.util.Vector;
 
 public class MainActivity extends Activity
         implements MediaPlayer.OnCompletionListener {
@@ -73,7 +81,7 @@ public class MainActivity extends Activity
     private int driveFilecount = 0;
     private String driveFileId;
 
-    private DriveServiceHelper mDriveServiceHelper;
+    private MyDriveServiceHelper mDriveServiceHelper;
 
     // Preferences
     private Boolean pref_isFixSatz = false;
@@ -88,35 +96,32 @@ public class MainActivity extends Activity
     private Animation rotate = null;
     private Context context = null;
 
-    private int animation_variante = 0;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
         SharedPreferences pref = PreferenceManager
                 .getDefaultSharedPreferences(this);
         String themeName = pref.getString("pref_theme", "AppTheme");
-        if (themeName.equals("AppTheme")) {
-            setTheme(R.style.AppTheme);
-            getApplication().setTheme(R.style.AppTheme);
+        if (themeName.equals("Holo")) {
+            setTheme(R.style.AppHolo);
+            getApplication().setTheme(R.style.AppHolo);
             R_arrow_back = R.drawable.arrow_back_white;
             R_arrow_forward = R.drawable.arrow_forward_white;
         }
-        if (themeName.equals("AppTheme1")) {
-            setTheme(R.style.AppTheme1);
-            getApplication().setTheme(R.style.AppTheme1);
+        if (themeName.equals("Dark")) {
+            setTheme(R.style.AppDark);
+            getApplication().setTheme(R.style.AppDark);
             R_arrow_back = R.drawable.arrow_back_white;
             R_arrow_forward = R.drawable.arrow_forward_white;
         }
-        if (themeName.equals("AppTheme2")) {
-            setTheme(R.style.AppTheme2);
-            getApplication().setTheme(R.style.AppTheme2);
+        if (themeName.equals("Light")) {
+            setTheme(R.style.AppLight);
+            getApplication().setTheme(R.style.AppLight);
             R_arrow_back = R.drawable.arrow_back_black;
             R_arrow_forward = R.drawable.arrow_forward_black;
         }
 
         super.onCreate(savedInstanceState);
-        PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
         context = getApplicationContext();
         setContentView(R.layout.dagoberts_plan);
 
@@ -231,9 +236,10 @@ public class MainActivity extends Activity
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.activity_main, menu);
         mnitemfor = menu.findItem(R.id.menu_forward);
+        mnitemback = menu.findItem(R.id.menu_backward);
         rotate = AnimationUtils.loadAnimation(this, R.anim.rotation);
         locButton = (ImageView) menu.findItem(R.id.menu_forward).getActionView();
-        locButton.setImageResource(R_arrow_forward);
+        locButton.setImageResource(R_arrow_back);
         locButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -249,28 +255,14 @@ public class MainActivity extends Activity
             public void onAnimationStart(Animation animation) {}
             public void onAnimationRepeat(Animation animation) {}
             public void onAnimationEnd(Animation animation) {
-
                 if (flipper.getDisplayedChild()==0) {
                     locButton.setImageResource(R_arrow_forward);
-                } else {
+                }
+                if (flipper.getDisplayedChild()==1) {
                     locButton.setImageResource(R_arrow_back);
                 }
-
-                switch (animation_variante) {
-                    case 1:
-                        flipper.setInAnimation(AnimationUtils.loadAnimation(context, R.anim.in_from_left));
-                        flipper.setOutAnimation(AnimationUtils.loadAnimation(context, R.anim.out_to_right));
-                        flipper.setDisplayedChild(0);
-                        locButton.startAnimation(rotate);
-                        break;
-                    default:
-                        //...
-                        break;
-                }
-                animation_variante=0;
             }
         });
-        mnitemback = menu.findItem(R.id.menu_backward);
         updateMenu();
         return true;
     }
@@ -299,22 +291,40 @@ public class MainActivity extends Activity
     }
 
     private void initMap() {
-        //flipper.removeView(findViewById(R.id.Grid0));
-        animation_variante=0;
         showValues();
         showResults();
-        Log.i(TAG, "flipper displayedChild : " + flipper.getDisplayedChild());
-        flipper.setInAnimation(AnimationUtils.loadAnimation(this, R.anim.in_from_left));
-        flipper.setOutAnimation(AnimationUtils.loadAnimation(this, R.anim.out_to_right));
-        if (dp.getDisplayedChild() == 0) {
-            flipper.setDisplayedChild(1);
-            animation_variante=1;
-            locButton.startAnimation(rotate);
-        } else {
-            locButton.startAnimation(rotate);
-            flipper.setDisplayedChild(1);
-        }
         updateMenu();
+
+
+        ViewGroup sceneRoot = (ViewGroup) findViewById(R.id.scene_root3);
+        Scene scene = Scene.getSceneForLayout(sceneRoot, R.layout.dagoberts_plan2, this);
+        Transition myTransition =
+                TransitionInflater.from(this).
+                        inflateTransition(R.transition.mytransition);
+        myTransition.setDuration(700);
+        myTransition.addListener(new Transition.TransitionListener() {
+            public void onTransitionStart(Transition transition) {}
+            public void onTransitionCancel(Transition transition) {}
+            public void onTransitionPause(Transition transition) {}
+            public void onTransitionResume(Transition transition) {}
+            public void onTransitionEnd(Transition transition) {
+                findViewById(R.id.fab).setVisibility(View.VISIBLE);
+                flipper.setDisplayedChild(1);
+                if (dp.getDisplayedChild()==0) {
+                    Handler handler = new Handler();
+                    Runnable runnable = new Runnable(){
+                        @Override
+                        public void run() {
+                            onBackwardMenu(null);
+                        }};
+                    handler.post(runnable);
+                    // funzt nicht :
+                    //onBackwardMenu(null);
+                }
+            }
+        });
+        TransitionManager.go(scene, myTransition);
+
         dp_alt = new DagosPlan(dp);
     }
 
@@ -868,7 +878,7 @@ public class MainActivity extends Activity
     }
 
     public void updateMenu() {
-        /*
+       /*
         mnitemfor.setEnabled(true);
         mnitemfor.setVisible(true);
         mnitemback.setEnabled(false);
@@ -894,6 +904,8 @@ public class MainActivity extends Activity
     public void onDiscardClicked(MenuItem item) {
         dp = new DagosPlan(dp_alt);
         Toast.makeText(this, "discarded", Toast.LENGTH_LONG).show();
+        //Snackbar.make(flipper, "discarded", Snackbar.LENGTH_LONG)
+        //        .setAction("Action", null).show();
         showValues();
         showResults();
     }
@@ -995,7 +1007,34 @@ public class MainActivity extends Activity
         GoogleSignInClient client = GoogleSignIn.getClient(this, signInOptions);
 
         // The result of the sign-in Intent is handled in onActivityResult.
-        startActivityForResult(client.getSignInIntent(), REQUEST_CODE_SIGN_IN);
+        GoogleSignInAccount googleAccount = GoogleSignIn.getLastSignedInAccount(this);
+        if (googleAccount==null) {
+            startActivityForResult(client.getSignInIntent(), REQUEST_CODE_SIGN_IN);
+        } else {
+            hasAccount(googleAccount);
+        }
+    }
+
+    private void hasAccount(GoogleSignInAccount googleAccount) {
+        // Use the authenticated account to sign in to the Drive service.
+        GoogleAccountCredential credential =
+                GoogleAccountCredential.usingOAuth2(
+                        this, Collections.singleton(DriveScopes.DRIVE_FILE));
+        credential.setSelectedAccount(googleAccount.getAccount());
+        Drive googleDriveService =
+                new Drive.Builder(
+                        AndroidHttp.newCompatibleTransport(),
+                        new GsonFactory(),
+                        credential)
+                        .setApplicationName("Dagobert")
+                        .build();
+
+        // The DriveServiceHelper encapsulates all REST API and SAF functionality.
+        // Its instantiation is required before handling any onClick actions.
+        mDriveServiceHelper = new MyDriveServiceHelper(googleDriveService);
+
+        queryFile();
+
     }
 
     /**
@@ -1007,24 +1046,8 @@ public class MainActivity extends Activity
                 .addOnSuccessListener(googleAccount -> {
                     Log.d(TAG, "Signed in as " + googleAccount.getEmail());
 
-                    // Use the authenticated account to sign in to the Drive service.
-                    GoogleAccountCredential credential =
-                            GoogleAccountCredential.usingOAuth2(
-                                    this, Collections.singleton(DriveScopes.DRIVE_FILE));
-                    credential.setSelectedAccount(googleAccount.getAccount());
-                    Drive googleDriveService =
-                            new Drive.Builder(
-                                    AndroidHttp.newCompatibleTransport(),
-                                    new GsonFactory(),
-                                    credential)
-                                    .setApplicationName("Dagobert")
-                                    .build();
+                    hasAccount(googleAccount);
 
-                    // The DriveServiceHelper encapsulates all REST API and SAF functionality.
-                    // Its instantiation is required before handling any onClick actions.
-                    mDriveServiceHelper = new DriveServiceHelper(googleDriveService);
-
-                    queryFile();
                 })
                 .addOnFailureListener(exception -> Log.e(TAG, "Unable to sign in.", exception));
     }
@@ -1032,6 +1055,7 @@ public class MainActivity extends Activity
     /**
      * Opens the Storage Access Framework file picker using {@link #REQUEST_CODE_OPEN_DOCUMENT}.
      */
+
     private void openFilePicker() {
         if (mDriveServiceHelper != null) {
             Log.d(TAG, "Opening file picker.");
@@ -1052,16 +1076,14 @@ public class MainActivity extends Activity
             Log.d(TAG, "Opening " + uri.getPath());
 
             mDriveServiceHelper.openFileUsingStorageAccessFramework(getContentResolver(), uri)
-                    .addOnSuccessListener(nameAndTSAndContent -> {
-                        String name = (String) nameAndTSAndContent.get(0);
-                        String timestamp = (String) nameAndTSAndContent.get(1);
-                        DagosPlan dp = (DagosPlan) nameAndTSAndContent.get(2);
+                    .addOnSuccessListener(readResult -> {
+                        String timestamp = (String) readResult.get(0);
+                        DagosPlan dp = (DagosPlan) readResult.get(1);
                         try {
 
                         } catch (Exception e) {
 
                         }
-                        Log.i(TAG, "Name ist : " + name);
                         Log.i(TAG, "Kontostand ist : " + dp.getKontostand());
                     })
                     .addOnFailureListener(exception ->
@@ -1076,7 +1098,7 @@ public class MainActivity extends Activity
         if (mDriveServiceHelper != null) {
             Log.d(TAG, "Creating a file.");
 
-            mDriveServiceHelper.createFile(filename)
+            mDriveServiceHelper.createDriveFile(filename)
                     .addOnSuccessListener(fileId -> saveFile(fileId))
                     .addOnFailureListener(exception ->
                             Log.e(TAG, "Couldn't create file.", exception));
@@ -1087,11 +1109,10 @@ public class MainActivity extends Activity
         if (mDriveServiceHelper != null) {
             Log.d(TAG, "Reading file " + fileId);
 
-            mDriveServiceHelper.readFile(fileId)
-                    .addOnSuccessListener(nameAndTsAndContent -> {
-                        String name = (String) nameAndTsAndContent.get(0);
-                        timestamp = (String) nameAndTsAndContent.get(1);
-                        dp = (DagosPlan) nameAndTsAndContent.get(2);
+            mDriveServiceHelper.readDriveFile(fileId)
+                    .addOnSuccessListener(readResult -> {
+                        timestamp = (String) readResult.get(0);
+                        dp = (DagosPlan) readResult.get(1);
 
                         initMap();
 
@@ -1105,9 +1126,9 @@ public class MainActivity extends Activity
         if (mDriveServiceHelper != null) {
             Log.d(TAG, "Reading timestamp from file " + fileId);
 
-            mDriveServiceHelper.readFile(fileId)
-                    .addOnSuccessListener(nameAndTsAndContent -> {
-                        timestamp_vergl = (String) nameAndTsAndContent.get(1);
+            mDriveServiceHelper.readDriveFile(fileId)
+                    .addOnSuccessListener(readResult -> {
+                        timestamp_vergl = (String) readResult.get(0);
                         if (timestamp.equals(timestamp_vergl)) {
                             saveFile(fileId);
                         } else {
@@ -1124,8 +1145,11 @@ public class MainActivity extends Activity
             Log.d(TAG, "Saving " + fileId);
 
             timestamp = new Timestamp(new Date().getTime()).toString();
+            Vector<Object> inp = new Vector<>();
+            inp.add(0,timestamp);
+            inp.add(1, dp);
 
-            mDriveServiceHelper.saveFile(fileId, filename, dp, timestamp)
+            mDriveServiceHelper.saveDriveFile(fileId, filename, inp)
                     .addOnFailureListener(exception ->
                             Log.e(TAG, "Unable to save file via REST.", exception));
         }
@@ -1139,7 +1163,7 @@ public class MainActivity extends Activity
             Log.d(TAG, "Querying for files.");
             driveFileId="";
             driveFilecount=0;
-            mDriveServiceHelper.queryFiles()
+            mDriveServiceHelper.queryDriveFiles()
                     .addOnSuccessListener(fileList -> {
                         for (File file : fileList.getFiles()) {
                             Log.i(TAG, "queryFile filename : " + file.getName() + " " + file.getId());

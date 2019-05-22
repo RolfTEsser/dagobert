@@ -14,14 +14,14 @@ public class DagosSettingsActivity extends Activity {
         SharedPreferences pref = PreferenceManager
                 .getDefaultSharedPreferences(this);
         String themeName = pref.getString("pref_theme", "AppTheme");
-        if (themeName.equals("AppTheme")) {
-            setTheme(R.style.AppTheme);
+        if (themeName.equals("Holo")) {
+            setTheme(R.style.AppHolo);
         }
-        if (themeName.equals("AppTheme1")) {
-            setTheme(R.style.AppTheme1);
+        if (themeName.equals("Dark")) {
+            setTheme(R.style.AppDark);
         }
-        if (themeName.equals("AppTheme2")) {
-            setTheme(R.style.AppTheme2);
+        if (themeName.equals("Light")) {
+            setTheme(R.style.AppLight);
         }
         super.onCreate(savedInstanceState);
 		Log.i(MainActivity.TAG, "Dago starting Settings onCreate");

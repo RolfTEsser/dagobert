@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/map"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -27,9 +28,24 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <include layout="@layout/dagoberts_plan1"/>
-        <include layout="@layout/dagoberts_plan2"/>
-        <include layout="@layout/dagoberts_plan0"/>
+        <FrameLayout
+            android:id="@+id/scene_root1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout="@layout/dagoberts_plan1"/>
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/scene_root2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout="@layout/dagoberts_plan2"/>
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/scene_root3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout="@layout/dagoberts_plan0"/>
+        </FrameLayout>
 
     </ViewFlipper>
 </LinearLayout>
